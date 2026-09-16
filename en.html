@@ -26,33 +26,52 @@
   a { color: #3A5A32; text-decoration: none; }
   a:hover { color: #A9552C; }
   button { font-family: inherit; }
+  header nav a[href^="#"] { display: none; }
+  .mnav > summary::-webkit-details-marker { display: none; }
+  .mnav > summary::marker { content: ""; }
+  .mnav[open] > summary { border-color: #1E1C18; }
+  .mnav > div > a:last-child { border-bottom: 0; }
   @media (max-width: 700px) {
-    header nav a[href^="#"] { display: none; }
     header span[style*="font-size:26px"] { font-size: 22px; }
+    h1 { font-size: 2.05rem !important; line-height: 1.09 !important; letter-spacing: -0.022em !important; }
+    h2 { line-height: 1.14 !important; letter-spacing: -0.02em !important; }
   }
 </style>
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('.mnav a');
+    if (a) { var d = a.closest('details'); if (d) d.open = false; }
+  });
+</script>
 <style>
 .x1:hover{border-color:#1E1C18 !important;color:#1E1C18 !important}
 .x2:hover{background:#2C4626 !important;color:#FBF9F4 !important}
-.x3:hover{background:#2C4626 !important;color:#FBF9F4 !important}
-.x4:hover{border-color:#1E1C18 !important;color:#1E1C18 !important}
-.x5:hover{background:#2C4626 !important;color:#FBF9F4 !important}
+.x3:hover{color:#3A5A32 !important}
+.x4:hover{color:#3A5A32 !important}
+.x5:hover{color:#3A5A32 !important}
 .x6:hover{color:#3A5A32 !important}
 .x7:hover{color:#3A5A32 !important}
 .x8:hover{color:#3A5A32 !important}
 .x9:hover{color:#3A5A32 !important}
-.x10:hover{color:#3A5A32 !important}
-.x11:hover{background:#FFFFFF !important;color:#2C4626 !important}
-.x12:hover{border-color:#F4F1EA !important;color:#FFFFFF !important}
-.x13:hover{color:#FFFFFF !important}
-.x14:hover{color:#FFFFFF !important}
-.x15:hover{color:#E7E2D6 !important}
+.x10:hover{background:#2C4626 !important;color:#FBF9F4 !important}
+.x11:hover{border-color:#1E1C18 !important;color:#1E1C18 !important}
+.x12:hover{background:#2C4626 !important;color:#FBF9F4 !important}
+.x13:hover{color:#3A5A32 !important}
+.x14:hover{color:#3A5A32 !important}
+.x15:hover{color:#3A5A32 !important}
+.x16:hover{color:#3A5A32 !important}
+.x17:hover{color:#3A5A32 !important}
+.x18:hover{background:#FFFFFF !important;color:#2C4626 !important}
+.x19:hover{border-color:#F4F1EA !important;color:#FFFFFF !important}
+.x20:hover{color:#FFFFFF !important}
+.x21:hover{color:#FFFFFF !important}
+.x22:hover{color:#E7E2D6 !important}
 html{-webkit-text-size-adjust:100%}
 img{max-width:100%}
 details>summary::-webkit-details-marker{display:none}
 details>summary{cursor:pointer;display:flex}
-details>summary .fq::after{content:'+'}
-details[open]>summary .fq::after{content:'\2212'}
+#faq details>summary .fq::after{content:'+'}
+#faq details[open]>summary .fq::after{content:'\2212'}
 </style>
 </head>
 <body>
@@ -71,6 +90,20 @@ details[open]>summary .fq::after{content:'\2212'}
         <a href="#custom" style="font-size:14px;font-weight:500;color:#1E1C18">Custom builds</a>
         <a href="./" style="display:flex;align-items:center;gap:7px;border:1px solid #C9C2B1;color:#605B52;font-size:12px;font-weight:600;letter-spacing:0.1em;padding:8px 12px" class="x1"><svg viewBox="0 0 18 12" style="width:20px;height:13px;display:block;flex:0 0 auto;overflow:hidden" aria-hidden="true"><rect width="18" height="12" fill="#E03C31" /><rect y="6" width="18" height="6" fill="#001489" /><path d="M-3 -3.6L6.6 6H19" fill="none" stroke="#FFFFFF" stroke-width="4.2" /><path d="M-3 15.6L6.6 6" fill="none" stroke="#FFFFFF" stroke-width="4.2" /><path d="M-3 -3.6L6.6 6H19" fill="none" stroke="#007749" stroke-width="2.4" /><path d="M-3 15.6L6.6 6" fill="none" stroke="#007749" stroke-width="2.4" /><path d="M0 2.3L4.9 6 0 9.7z" fill="#FFB81C" /><path d="M0 3.5L3.7 6 0 8.5z" fill="#000000" /></svg><span>AF</span></a>
         <a href="https://wa.me/27834565646" target="_blank" rel="noopener" style="display:inline-block;background:#3A5A32;color:#FBF9F4;font-size:14px;font-weight:600;padding:10px 18px" class="x2">WhatsApp us</a>
+        <details class="mnav" style="position:relative;flex:0 0 auto">
+          <summary aria-label="Menu" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid #C9C2B1;cursor:pointer;list-style:none">
+            <svg viewBox="0 0 24 24" style="width:22px;height:22px;display:block" fill="none" stroke="#3A5A32" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7.5h16M4 12h16M4 16.5h16"></path></svg>
+          </summary>
+          <div style="position:absolute;top:calc(100% + 10px);right:0;z-index:60;min-width:240px;background:#FBF9F4;border:1px solid #DED8CA;padding:10px 18px 14px;box-shadow:0 14px 34px rgba(30,28,24,0.13)">
+          <a href="#apps" style="display:block;padding:13px 4px;font-size:16px;font-weight:500;color:#1E1C18;border-bottom:1px solid #E7E1D3" class="x3">The apps</a>
+          <a href="#insight" style="display:block;padding:13px 4px;font-size:16px;font-weight:500;color:#1E1C18;border-bottom:1px solid #E7E1D3" class="x4">Insight</a>
+          <a href="#how" style="display:block;padding:13px 4px;font-size:16px;font-weight:500;color:#1E1C18;border-bottom:1px solid #E7E1D3" class="x5">How we work</a>
+          <a href="#custom" style="display:block;padding:13px 4px;font-size:16px;font-weight:500;color:#1E1C18;border-bottom:1px solid #E7E1D3" class="x6">Custom builds</a>
+          <a href="#pricing" style="display:block;padding:13px 4px;font-size:16px;font-weight:500;color:#1E1C18;border-bottom:1px solid #E7E1D3" class="x7">Working together</a>
+          <a href="#faq" style="display:block;padding:13px 4px;font-size:16px;font-weight:500;color:#1E1C18;border-bottom:1px solid #E7E1D3" class="x8">FAQ</a>
+          <a href="#contact" style="display:block;padding:13px 4px;font-size:16px;font-weight:500;color:#1E1C18;border-bottom:1px solid #E7E1D3" class="x9">Contact</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -92,8 +125,8 @@ details[open]>summary .fq::after{content:'\2212'}
         <li style="border:1px solid #C9C2B1;padding:7px 13px;font-size:13px;font-weight:500;color:#3A372F">Your farm</li>
       </ul>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px">
-        <a href="https://wa.me/27834565646" target="_blank" rel="noopener" style="display:inline-block;background:#3A5A32;color:#FBF9F4;font-size:15px;font-weight:600;padding:15px 26px" class="x3">WhatsApp us</a>
-        <a href="#apps" style="display:inline-block;color:#1E1C18;font-size:15px;font-weight:600;padding:15px 26px;border:1px solid #C9C2B1" class="x4">See the apps</a>
+        <a href="https://wa.me/27834565646" target="_blank" rel="noopener" style="display:inline-block;background:#3A5A32;color:#FBF9F4;font-size:15px;font-weight:600;padding:15px 26px" class="x10">WhatsApp us</a>
+        <a href="#apps" style="display:inline-block;color:#1E1C18;font-size:15px;font-weight:600;padding:15px 26px;border:1px solid #C9C2B1" class="x11">See the apps</a>
       </div>
       <ul style="margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:13px;font-weight:500;color:#605B52">
         <li>Works offline on the farm</li>
@@ -390,7 +423,7 @@ details[open]>summary .fq::after{content:'\2212'}
           <li>Integrates with what you run now</li>
         </ul>
         <div>
-          <a href="#contact" style="display:inline-block;background:#3A5A32;color:#FBF9F4;font-size:15px;font-weight:600;padding:14px 24px;margin-top:6px" class="x5">Talk about a build</a>
+          <a href="#contact" style="display:inline-block;background:#3A5A32;color:#FBF9F4;font-size:15px;font-weight:600;padding:14px 24px;margin-top:6px" class="x12">Talk about a build</a>
         </div>
       </div>
     </div>
@@ -438,23 +471,23 @@ details[open]>summary .fq::after{content:'\2212'}
     <h2 style="margin:0 0 36px;font-size:clamp(1.8rem,3.2vw,2.5rem);line-height:1.06;letter-spacing:-0.03em;font-weight:700">The questions we always get.</h2>
 
     <div style="border-top:1px solid #DED8CA">
-      <details open="open"><summary style="width:100%;background:transparent;border:0;padding:22px 0;display:flex;gap:20px;align-items:baseline;text-align:left;cursor:pointer;color:#1E1C18;list-style:none" class="x6"><span style="flex:1;font-size:1.05rem;font-weight:600;line-height:1.4">What exactly is a PWA (Progressive Web App), in farm terms?</span><span class="fq" style="font-size:1.3rem;line-height:1;color:#3A5A32"></span></summary><p style="margin:0;padding:0 0 24px;max-width:64ch;font-size:15px;line-height:1.6;color:#3A372F">An app you install from a link instead of an app store. You send someone a web address, they open it once and tap "add to home screen", and from then on it behaves like any other app: its own icon on the home screen, opens full screen with no browser bars, works with no signal, and keeps its data on the phone. Your people don't need a Play Store or Apple ID, they don't need to remember a password for an app account, and nobody has to sideload an APK that arrives on WhatsApp.<br><br>The practical difference shows up when something needs to change. We deploy a fix and every phone on the farm has it the next time it opens — no update to chase around, no seasonal worker three versions behind, and no app-store review sitting in a queue for a week while your harvest carries on. It also means one build serves the foreman's Android, the packhouse tablet and the office laptop, instead of three separate things to maintain.</p></details>
+      <details open="open"><summary style="width:100%;background:transparent;border:0;padding:22px 0;display:flex;gap:20px;align-items:baseline;text-align:left;cursor:pointer;color:#1E1C18;list-style:none" class="x13"><span style="flex:1;font-size:1.05rem;font-weight:600;line-height:1.4">What exactly is a PWA (Progressive Web App), in farm terms?</span><span class="fq" style="font-size:1.3rem;line-height:1;color:#3A5A32"></span></summary><p style="margin:0;padding:0 0 24px;max-width:64ch;font-size:15px;line-height:1.6;color:#3A372F">An app you install from a link instead of an app store. You send someone a web address, they open it once and tap "add to home screen", and from then on it behaves like any other app: its own icon on the home screen, opens full screen with no browser bars, works with no signal, and keeps its data on the phone. Your people don't need a Play Store or Apple ID, they don't need to remember a password for an app account, and nobody has to sideload an APK that arrives on WhatsApp.<br><br>The practical difference shows up when something needs to change. We deploy a fix and every phone on the farm has it the next time it opens — no update to chase around, no seasonal worker three versions behind, and no app-store review sitting in a queue for a week while your harvest carries on. It also means one build serves the foreman's Android, the packhouse tablet and the office laptop, instead of three separate things to maintain.</p></details>
     </div>
 
     <div style="border-top:1px solid #DED8CA">
-      <details><summary style="width:100%;background:transparent;border:0;padding:22px 0;display:flex;gap:20px;align-items:baseline;text-align:left;cursor:pointer;color:#1E1C18;list-style:none" class="x7"><span style="flex:1;font-size:1.05rem;font-weight:600;line-height:1.4">Will it really work where there's no reception?</span><span class="fq" style="font-size:1.3rem;line-height:1;color:#3A5A32"></span></summary><p style="margin:0;padding:0 0 24px;max-width:64ch;font-size:15px;line-height:1.6;color:#3A372F">Yes — that is the whole point of building it this way. The app itself and the data your team works with live on the phone, so it opens and runs the same whether there are four bars of signal or none. Captures are written to the phone first and held in a register: bin counts, treatments, photos, voice notes, everything. The person recording sees it saved immediately, because it is saved — the sync is a separate problem the app handles on its own.<br><br>When the phone finds signal again — at the shed, at the gate, in the yard or on the way to town — the data uploads in the background, in order, without anyone pressing a button. If the battery dies or the app is closed halfway through a block, nothing is lost; it picks up where it stopped. And because each device keeps its own data, two people recording in different parts of the farm never overwrite each other: the records merge when they both come back into coverage.</p></details>
+      <details><summary style="width:100%;background:transparent;border:0;padding:22px 0;display:flex;gap:20px;align-items:baseline;text-align:left;cursor:pointer;color:#1E1C18;list-style:none" class="x14"><span style="flex:1;font-size:1.05rem;font-weight:600;line-height:1.4">Will it really work where there's no reception?</span><span class="fq" style="font-size:1.3rem;line-height:1;color:#3A5A32"></span></summary><p style="margin:0;padding:0 0 24px;max-width:64ch;font-size:15px;line-height:1.6;color:#3A372F">Yes — that is the whole point of building it this way. The app itself and the data your team works with live on the phone, so it opens and runs the same whether there are four bars of signal or none. Captures are written to the phone first and held in a register: bin counts, treatments, photos, voice notes, everything. The person recording sees it saved immediately, because it is saved — the sync is a separate problem the app handles on its own.<br><br>When the phone finds signal again — at the shed, at the gate, in the yard or on the way to town — the data uploads in the background, in order, without anyone pressing a button. If the battery dies or the app is closed halfway through a block, nothing is lost; it picks up where it stopped. And because each device keeps its own data, two people recording in different parts of the farm never overwrite each other: the records merge when they both come back into coverage.</p></details>
     </div>
 
     <div style="border-top:1px solid #DED8CA">
-      <details><summary style="width:100%;background:transparent;border:0;padding:22px 0;display:flex;gap:20px;align-items:baseline;text-align:left;cursor:pointer;color:#1E1C18;list-style:none" class="x8"><span style="flex:1;font-size:1.05rem;font-weight:600;line-height:1.4">Do my people need new phones?</span><span class="fq" style="font-size:1.3rem;line-height:1;color:#3A5A32"></span></summary><p style="margin:0;padding:0 0 24px;max-width:64ch;font-size:15px;line-height:1.6;color:#3A372F">Almost never. Any reasonably recent Android phone or iPhone runs it, and that includes the entry-level handsets most farm staff actually carry. The apps are built light on purpose — small downloads, little storage, no heavy graphics — because the phone in the field is rarely the newest one on the farm. The interfaces are designed for those conditions too: big buttons that work through gloves, high contrast that stays readable in full sun, and screens that can be completed one-handed while you're doing something else.<br><br>If you are buying devices for the field anyway, we'll tell you what to look for — battery life over specification, a screen bright enough to matter, a rugged case rather than an expensive phone — and which models have survived dust, heat and a long day in the back of a bakkie on other farms. There's no hardware to buy from us; the advice is just part of getting it working.</p></details>
+      <details><summary style="width:100%;background:transparent;border:0;padding:22px 0;display:flex;gap:20px;align-items:baseline;text-align:left;cursor:pointer;color:#1E1C18;list-style:none" class="x15"><span style="flex:1;font-size:1.05rem;font-weight:600;line-height:1.4">Do my people need new phones?</span><span class="fq" style="font-size:1.3rem;line-height:1;color:#3A5A32"></span></summary><p style="margin:0;padding:0 0 24px;max-width:64ch;font-size:15px;line-height:1.6;color:#3A372F">Almost never. Any reasonably recent Android phone or iPhone runs it, and that includes the entry-level handsets most farm staff actually carry. The apps are built light on purpose — small downloads, little storage, no heavy graphics — because the phone in the field is rarely the newest one on the farm. The interfaces are designed for those conditions too: big buttons that work through gloves, high contrast that stays readable in full sun, and screens that can be completed one-handed while you're doing something else.<br><br>If you are buying devices for the field anyway, we'll tell you what to look for — battery life over specification, a screen bright enough to matter, a rugged case rather than an expensive phone — and which models have survived dust, heat and a long day in the back of a bakkie on other farms. There's no hardware to buy from us; the advice is just part of getting it working.</p></details>
     </div>
 
     <div style="border-top:1px solid #DED8CA">
-      <details><summary style="width:100%;background:transparent;border:0;padding:22px 0;display:flex;gap:20px;align-items:baseline;text-align:left;cursor:pointer;color:#1E1C18;list-style:none" class="x9"><span style="flex:1;font-size:1.05rem;font-weight:600;line-height:1.4">Who owns the data, and can I get it out?</span><span class="fq" style="font-size:1.3rem;line-height:1;color:#3A5A32"></span></summary><p style="margin:0;padding:0 0 24px;max-width:64ch;font-size:15px;line-height:1.6;color:#3A372F">You do. Every record your people capture belongs to the farm, not to us — and your data never leaves the farm: nothing is sold, shared with a third party, or used to train anything outside your own operation. Export to an Excel spreadsheet whenever you like, on your own schedule, and if you ever leave you take the full history with you in a format you can open without us. No exit fee, no data held hostage, no last-minute negotiation. We'd rather earn the next season than lock you in.<br><br>On the technical side we fit in with what you have. If there is already a server, an accounting package, a scale system or a packhouse line with its own software, we work alongside it and integrate where it makes sense. If there isn't much yet, we'll recommend what has actually worked on other farms — backups, connectivity, who holds which login — rather than sell you infrastructure you don't need.</p></details>
+      <details><summary style="width:100%;background:transparent;border:0;padding:22px 0;display:flex;gap:20px;align-items:baseline;text-align:left;cursor:pointer;color:#1E1C18;list-style:none" class="x16"><span style="flex:1;font-size:1.05rem;font-weight:600;line-height:1.4">Who owns the data, and can I get it out?</span><span class="fq" style="font-size:1.3rem;line-height:1;color:#3A5A32"></span></summary><p style="margin:0;padding:0 0 24px;max-width:64ch;font-size:15px;line-height:1.6;color:#3A372F">You do. Every record your people capture belongs to the farm, not to us — and your data never leaves the farm: nothing is sold, shared with a third party, or used to train anything outside your own operation. Export to an Excel spreadsheet whenever you like, on your own schedule, and if you ever leave you take the full history with you in a format you can open without us. No exit fee, no data held hostage, no last-minute negotiation. We'd rather earn the next season than lock you in.<br><br>On the technical side we fit in with what you have. If there is already a server, an accounting package, a scale system or a packhouse line with its own software, we work alongside it and integrate where it makes sense. If there isn't much yet, we'll recommend what has actually worked on other farms — backups, connectivity, who holds which login — rather than sell you infrastructure you don't need.</p></details>
     </div>
 
     <div style="border-top:1px solid #DED8CA;border-bottom:1px solid #DED8CA">
-      <details><summary style="width:100%;background:transparent;border:0;padding:22px 0;display:flex;gap:20px;align-items:baseline;text-align:left;cursor:pointer;color:#1E1C18;list-style:none" class="x10"><span style="flex:1;font-size:1.05rem;font-weight:600;line-height:1.4">How long before we're using it?</span><span class="fq" style="font-size:1.3rem;line-height:1;color:#3A5A32"></span></summary><p style="margin:0;padding:0 0 24px;max-width:64ch;font-size:15px;line-height:1.6;color:#3A372F">For the existing apps, usually a week or two. Week one is the farm visit and setup: we load your blocks, camps, cultivars, teams, lines and spray programmes, connect whatever data you already keep, and check it against what is actually on the ground. Week two is training on the phones your people already carry, followed by a live run on real work — a day of harvest, an intake, a treatment round — with us on hand to fix what doesn't fit. After that you are recording for real, and we stay available on WhatsApp through the first season.<br><br>A custom build depends on scope. It starts with a fixed-price discovery of a week or two, which ends in a written scope and a firm quote — so you know the cost and the timeline before you commit to anything. Small solutions are often live within a month; a system that spans the packhouse and the office takes longer, and we'd rather say that up front than halfway through.</p></details>
+      <details><summary style="width:100%;background:transparent;border:0;padding:22px 0;display:flex;gap:20px;align-items:baseline;text-align:left;cursor:pointer;color:#1E1C18;list-style:none" class="x17"><span style="flex:1;font-size:1.05rem;font-weight:600;line-height:1.4">How long before we're using it?</span><span class="fq" style="font-size:1.3rem;line-height:1;color:#3A5A32"></span></summary><p style="margin:0;padding:0 0 24px;max-width:64ch;font-size:15px;line-height:1.6;color:#3A372F">For the existing apps, usually a week or two. Week one is the farm visit and setup: we load your blocks, camps, cultivars, teams, lines and spray programmes, connect whatever data you already keep, and check it against what is actually on the ground. Week two is training on the phones your people already carry, followed by a live run on real work — a day of harvest, an intake, a treatment round — with us on hand to fix what doesn't fit. After that you are recording for real, and we stay available on WhatsApp through the first season.<br><br>A custom build depends on scope. It starts with a fixed-price discovery of a week or two, which ends in a written scope and a firm quote — so you know the cost and the timeline before you commit to anything. Small solutions are often live within a month; a system that spans the packhouse and the office takes longer, and we'd rather say that up front than halfway through.</p></details>
     </div>
   </section>
 
@@ -481,17 +514,17 @@ details[open]>summary .fq::after{content:'\2212'}
       </div>
       <div style="min-width:0;display:flex;flex-direction:column;gap:22px">
         <div style="display:flex;flex-wrap:wrap;gap:12px">
-          <a href="https://wa.me/27834565646" target="_blank" rel="noopener" style="display:inline-block;background:#F4F1EA;color:#3A5A32;font-size:15px;font-weight:600;padding:15px 26px" class="x11">WhatsApp us</a>
-          <a href="mailto:dawie.pieterse@gmail.com?subject=Plaashek%20enquiry" target="_blank" rel="noopener" style="display:inline-block;border:1px solid rgba(244,241,234,0.45);color:#F4F1EA;font-size:15px;font-weight:600;padding:15px 26px" class="x12">Send an email</a>
+          <a href="https://wa.me/27834565646" target="_blank" rel="noopener" style="display:inline-block;background:#F4F1EA;color:#3A5A32;font-size:15px;font-weight:600;padding:15px 26px" class="x18">WhatsApp us</a>
+          <a href="mailto:dawie.pieterse@gmail.com?subject=Plaashek%20enquiry" target="_blank" rel="noopener" style="display:inline-block;border:1px solid rgba(244,241,234,0.45);color:#F4F1EA;font-size:15px;font-weight:600;padding:15px 26px" class="x19">Send an email</a>
         </div>
         <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px 24px;font-size:15px">
           <div>
             <dt style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#CBD9C2;margin-bottom:6px">Phone</dt>
-            <dd style="margin:0"><a href="tel:+27834565646" style="color:#F4F1EA" class="x13">+27 83 456 5646</a></dd>
+            <dd style="margin:0"><a href="tel:+27834565646" style="color:#F4F1EA" class="x20">+27 83 456 5646</a></dd>
           </div>
           <div>
             <dt style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#CBD9C2;margin-bottom:6px">Email</dt>
-            <dd style="margin:0"><a href="mailto:dawie.pieterse@gmail.com" style="color:#F4F1EA;word-break:break-word" class="x14">dawie.pieterse@gmail.com</a></dd>
+            <dd style="margin:0"><a href="mailto:dawie.pieterse@gmail.com" style="color:#F4F1EA;word-break:break-word" class="x21">dawie.pieterse@gmail.com</a></dd>
           </div>
           <div>
             <dt style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#CBD9C2;margin-bottom:6px">Based in</dt>
@@ -511,7 +544,7 @@ details[open]>summary .fq::after{content:'\2212'}
       <span style="color:#E7E2D6;font-weight:600">Plaashek</span>
       <span>by Pieterse Consulting Services</span>
       <span>Eienaar · Veldnotas · Boord · Kudde · Stoor · Water · Werkswinkel · Oudit · Span</span>
-      <a href="https://plaashek.co.za" style="color:#9C958A" class="x15">plaashek.co.za</a>
+      <a href="https://plaashek.co.za" style="color:#9C958A" class="x22">plaashek.co.za</a>
       <span style="margin-left:auto">© 2026 · Built in the Western Cape</span>
     </div>
   </footer>
