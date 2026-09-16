@@ -43,6 +43,8 @@
 .x13:hover{color:#FFFFFF !important}
 .x14:hover{color:#FFFFFF !important}
 .x15:hover{color:#E7E2D6 !important}
+html{-webkit-text-size-adjust:100%}
+img{max-width:100%}
 details>summary::-webkit-details-marker{display:none}
 details>summary{cursor:pointer;display:flex}
 details>summary .fq::after{content:'+'}
@@ -53,12 +55,12 @@ details[open]>summary .fq::after{content:'\2212'}
 <div style="background:#F4F1EA;color:#1E1C18;font-family:Archivo,'Helvetica Neue',Helvetica,Arial,sans-serif">
 
   <header style="position:sticky;top:0;z-index:50;background:rgba(244,241,234,0.93);backdrop-filter:blur(10px);border-bottom:1px solid #DED8CA">
-    <div style="max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px">
+    <div style="max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
       <a href="#top" style="display:flex;align-items:center;gap:10px;color:#1E1C18;flex:0 0 auto">
         <svg viewBox="0 0 34 32" style="width:36px;height:34px;display:block;flex:0 0 auto" fill="none" stroke="#3A5A32" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5v24M31 5v24"></path><path d="M7 9h20M7 15.33h20M7 21.67h20M7 28h20"></path><path d="M7 9v19M27 9v19"></path><path d="M7 9l20 19M27 9L7 28"></path></svg>
         <span style="font-size:26px;font-weight:700;letter-spacing:-0.02em">Plaashek</span>
       </a>
-      <nav style="display:flex;flex-wrap:wrap;gap:20px;margin-left:auto;align-items:center">
+      <nav style="display:flex;flex-wrap:wrap;gap:14px 20px;margin-left:auto;align-items:center;justify-content:flex-end">
         <a href="#apps" style="font-size:14px;font-weight:500;color:#1E1C18">Die programme</a>
         <a href="#insight" style="font-size:14px;font-weight:500;color:#1E1C18">Insig</a>
         <a href="#how" style="font-size:14px;font-weight:500;color:#1E1C18">Hoe ons werk</a>
@@ -69,7 +71,7 @@ details[open]>summary .fq::after{content:'\2212'}
     </div>
   </header>
 
-  <section id="top" style="max-width:1180px;margin:0 auto;padding:72px 24px 84px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:center">
+  <section id="top" style="max-width:1180px;margin:0 auto;padding:72px 24px 84px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:56px;align-items:center">
     <div style="min-width:0">
       <p style="margin:0 0 22px;font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#605B52">Plaashek · Plaasprogrammatuur</p>
       <h1 style="margin:0 0 24px;font-size:clamp(2.4rem,5.2vw,4.1rem);line-height:0.98;letter-spacing:-0.035em;font-weight:700">Elke plaas het 'n hek. Wat ook al agter joune is, ons het 'n digitale oplossing daarvoor.</h1>
@@ -369,7 +371,7 @@ details[open]>summary .fq::after{content:'\2212'}
   </section>
 
   <section id="custom" style="background:#EAE5D9;border-top:1px solid #DED8CA;border-bottom:1px solid #DED8CA">
-    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))">
       <div style="min-width:0;position:relative;min-height:420px;background:#DDD7C7">
         <img src="photos/pcs-custom.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
