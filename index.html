@@ -26,6 +26,10 @@
   a { color: #3A5A32; text-decoration: none; }
   a:hover { color: #A9552C; }
   button { font-family: inherit; }
+  @media (max-width: 700px) {
+    header nav a[href^="#"] { display: none; }
+    header span[style*="font-size:26px"] { font-size: 22px; }
+  }
 </style>
 <style>
 .x1:hover{border-color:#1E1C18 !important;color:#1E1C18 !important}
