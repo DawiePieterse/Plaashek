@@ -1,0 +1,35 @@
+/* The small pages beside the two main ones: privacy, terms and the 404. Same colours and font as
+   index.html (whose styles are inline); paths are absolute because the 404 is served at any depth. */
+@font-face { font-family: Archivo; font-style: normal; font-weight: 400 700; font-display: swap; src: url(/fonts/archivo-latin.woff2) format("woff2"); }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: #F4F1EA; color: #1E1C18; font-family: Archivo, "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+a { color: #3A5A32; }
+a:hover { color: #A9552C; }
+header { border-bottom: 1px solid #DED8CA; }
+header > div, main, footer > div { max-width: 760px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+header > div { padding-top: 14px; padding-bottom: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.brand { display: flex; align-items: center; gap: 10px; color: #1E1C18; text-decoration: none; font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
+.brand svg { width: 34px; height: 32px; display: block; }
+header nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 14px; font-weight: 500; }
+header nav a { color: #1E1C18; text-decoration: none; padding: 12px 0; }
+header nav a:hover { color: #3A5A32; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; width: 100%; padding-top: 56px; padding-bottom: 80px; }
+.eyebrow { margin: 0 0 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #605B52; }
+h1 { margin: 0 0 14px; font-size: clamp(2rem, 5vw, 2.9rem); line-height: 1.04; letter-spacing: -0.03em; }
+h2 { margin: 44px 0 12px; font-size: 1.3rem; letter-spacing: -0.015em; }
+p, li { font-size: 16px; line-height: 1.65; color: #3A372F; }
+p { margin: 0 0 14px; }
+ul { margin: 0 0 14px; padding-left: 22px; }
+li { margin-bottom: 6px; }
+.lede { font-size: 1.1rem; }
+.dated { font-size: 14px; color: #605B52; }
+.btn { display: inline-block; background: #3A5A32; color: #FBF9F4; font-size: 15px; font-weight: 600; padding: 15px 26px; text-decoration: none; margin: 8px 12px 0 0; }
+.btn:hover { background: #2C4626; color: #FBF9F4; }
+.btn.plain { background: transparent; color: #1E1C18; border: 1px solid #C9C2B1; }
+.btn.plain:hover { border-color: #1E1C18; color: #1E1C18; }
+footer { background: #201E1A; color: #9C958A; font-size: 13px; }
+footer > div { padding-top: 30px; padding-bottom: 30px; display: flex; flex-wrap: wrap; gap: 12px 28px; }
+footer a { color: #E7E2D6; display: inline-block; padding: 6px 0; }
+footer span:last-child { margin-left: auto; }

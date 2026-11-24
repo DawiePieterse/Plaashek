@@ -3,23 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#F4F1EA">
 <title>Plaashek — Plaasprogrammatuur vir boorde, troppe en pakhuise</title>
-<meta name="description" content="Vyftien programme wat die plaas van papier afhaal: weer, vee, werkers en lone, oes, pakhuis, stoor, veldnotas, werkswinkel, water, bespuitings, lande, diesel, krag, KI en jaareinde. Gebou om sonder sein te werk, in die veld.">
+<meta name="description" content="Plaasprogrammatuur wat die plaas van papier afhaal: vee, werkers en lone, oes, pakhuis, stoor, water, lande, diesel en krag. Werk sonder sein, in die veld.">
 <meta property="og:title" content="Plaashek — Plaasprogrammatuur vir boorde, troppe en pakhuise">
 <meta property="og:description" content="Vyftien programme wat die plaas van papier afhaal — weer, vee, werkers, oes, pakhuis, stoor, water, lande, diesel, krag, KI, jaareinde. Werk sonder sein, in die veld.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://plaashek.co.za/">
+<meta property="og:site_name" content="Plaashek">
+<meta property="og:image" content="https://plaashek.co.za/og-af.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Plaashek: minder papier, meer plaas. Plaasprogrammatuur wat sonder sein werk.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://plaashek.co.za/og-af.jpg">
 <meta property="og:locale" content="af_ZA">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://plaashek.co.za/" />
 <link rel="alternate" hreflang="af" href="https://plaashek.co.za/" />
 <link rel="alternate" hreflang="en" href="https://plaashek.co.za/en.html" />
 <link rel="alternate" hreflang="x-default" href="https://plaashek.co.za/" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Plaashek","description":"Farm software for orchards, herds, packhouses, water, workshops, audits and labour. Offline-first progressive web apps built for South African farms.","url":"https://plaashek.co.za/","telephone":"+27834565646","founder":{"@type":"Person","name":"Dawie Pieterse"},"areaServed":{"@type":"Country","name":"South Africa"},"availableLanguage":["af","en"],"knowsLanguage":["af","en"],"serviceType":"Agricultural software development","sameAs":["https://wa.me/27834565646"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Plaashek","description":"Farm software for orchards, herds, packhouses, water, workshops, audits and labour. Offline-first progressive web apps built for South African farms.","url":"https://plaashek.co.za/","telephone":"+27834565646","areaServed":{"@type":"Country","name":"South Africa"},"availableLanguage":["af","en"],"knowsLanguage":["af","en"],"serviceType":"Agricultural software development","sameAs":["https://wa.me/27834565646"]}</script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Archivo from this site's own fonts/ folder (SIL Open Font License), so the page asks nothing of
+     another website: no visitor's address goes to Google, and there is nothing to ask consent for. */
+  @font-face { font-family: Archivo; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/archivo-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: Archivo; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/archivo-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+</style>
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -45,12 +61,7 @@
     h2 { line-height: 1.14 !important; letter-spacing: -0.02em !important; }
   }
 </style>
-<script>
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('.mnav a');
-    if (a) { var d = a.closest('details'); if (d) d.open = false; }
-  });
-</script>
+<script src="site.js" defer></script>
 <style>
 .x1:hover{border-color:#1E1C18 !important;color:#1E1C18 !important}
 .x2:hover{background:#2C4626 !important;color:#FBF9F4 !important}
@@ -79,6 +90,9 @@ img{max-width:100%}
 details>summary::-webkit-details-marker{display:none}
 details>summary{cursor:pointer;display:flex}
 #faq details>summary .fq::after{content:'+'}
+.x22{display:inline-block;padding:6px 0}
+.ander::placeholder{color:#D8E2D0;opacity:1}
+.ander:focus-visible{border-bottom-color:#F4F1EA !important;box-shadow:0 2px 0 #F4F1EA}
 #faq details[open]>summary .fq::after{content:'\2212'}
 </style>
 </head>
@@ -143,7 +157,7 @@ details>summary{cursor:pointer;display:flex}
       </ul>
     </div>
     <div style="min-width:0;position:relative;aspect-ratio:4/5;background:#E8E3D6;border:1px solid #DED8CA">
-      <img src="photos/pcs-hero.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+      <img src="photos/pcs-hero.webp" alt="Tekening van 'n oop plaashek met veld en doringbome daaragter" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
     </div>
   </section>
 
@@ -178,7 +192,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-owner.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-owner.webp" alt="Boer met 'n tablet in 'n mielieland, 'n spilpunt agter hom" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -198,7 +212,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-weer.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-weer.webp" alt="Boer lees 'n reënmeter af met sy foon in die hand terwyl 'n donderstorm oor die berg trek" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -218,7 +232,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-kudde.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-kudde.webp" alt="Trop beeste wei in die veld" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -238,7 +252,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-span.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-span.webp" alt="Voorman praat met 'n span werkers voor 'n trekker" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -258,7 +272,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-boord.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-boord.webp" alt="Plukkers oes appels in 'n boord, met kratte op 'n wa" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -278,7 +292,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-pakhuis.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-pakhuis.webp" alt="Pakkers sorteer lemoene in 'n pakhuis langs 'n palet met 'n strepieskode" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -298,7 +312,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-stoor.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-stoor.webp" alt="Plaasstoor met rakke vol kanne, sakke en dromme" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -318,7 +332,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-notes.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-notes.webp" alt="Boer en sy seun kyk na beeste in die veld; die boer wys iets uit" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -337,7 +351,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-werkswinkel.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-werkswinkel.webp" alt="Trekker met oop enjinkap in die plaas se werkswinkel" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -357,7 +371,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-water.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-water.webp" alt="Besproeiing op 'n land, met 'n pomphuis en sonpanele" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -376,7 +390,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-bespuitings.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-bespuitings.webp" alt="Trekker met 'n spuit in 'n wingerd" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -395,7 +409,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-lande.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-lande.webp" alt="Trekker met 'n planter op 'n mielieland, silo's in die agtergrond" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -415,7 +429,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-diesel.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-diesel.webp" alt="Man met 'n foon by die plaas se dieseltenk en pomp" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -435,7 +449,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-krag.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-krag.webp" alt="Boer lees 'n kragmeter af langs sonpanele en 'n pomphuis" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -455,7 +469,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-ki.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-ki.webp" alt="Boer kyk nadenkend na 'n foon met 'n boodskap op die skerm" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -475,7 +489,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-jaareinde.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-jaareinde.webp" alt="Boer skud hand met sy rekenmeester oor 'n lessenaar met lêers" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -495,7 +509,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-oudit.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-oudit.webp" alt="Vrou met 'n knipbord kontroleer bokse vrugte in 'n koelkamer" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -581,7 +595,7 @@ details>summary{cursor:pointer;display:flex}
   <section id="custom" style="background:#EAE5D9;border-top:1px solid #DED8CA;border-bottom:1px solid #DED8CA">
     <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))">
       <div style="min-width:0;position:relative;min-height:420px;background:#DDD7C7">
-        <img src="photos/pcs-custom.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-custom.webp" alt="Hande op 'n skootrekenaar met 'n oes-sigblad oop" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="min-width:0;padding:64px 24px;display:flex;flex-direction:column;justify-content:center;gap:20px">
         <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#605B52">Pasgemaak</p>
@@ -632,7 +646,7 @@ details>summary{cursor:pointer;display:flex}
         <footer style="font-size:14px;color:#605B52">Litchieboer, Mpumalanga</footer>
       </blockquote>
       <div style="min-width:0;justify-self:center;width:180px;height:180px;background:#E8E3D6;border:1px solid #DED8CA;position:relative">
-        <img src="photos/pcs-quote.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-quote.webp" alt="Plukkers oes litchi's in 'n boord" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
     </div>
   </section>
@@ -670,11 +684,11 @@ details>summary{cursor:pointer;display:flex}
         <p style="margin:0;font-size:1.05rem;line-height:1.6;color:#D8E2D0;max-width:46ch">'n Boodskap is genoeg om te begin. Ons vra 'n paar vrae, en as ons nie die regte oplossing is nie, sê ons so.</p>
       </div>
       <div style="min-width:0;display:flex;flex-direction:column;gap:22px">
-        <fieldset id="kies" style="margin:0;padding:0;border:0;min-width:0">
+        <fieldset id="kies" data-hello="Hallo Plaashek. Ek stel belang in:" data-none="meer inligting" data-other="Ander" data-subject="Plaashek navraag" style="margin:0;padding:0;border:0;min-width:0">
           <legend style="padding:0;margin:0 0 6px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#CBD9C2">Waarin stel jy belang?</legend>
           <p style="margin:0 0 14px;font-size:14px;color:#D8E2D0">Kies soveel as jy wil; dit gaan saam in jou boodskap.</p>
           <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px 18px"><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Eienaar" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Eienaar</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Weer" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Weer</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Kudde" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Kudde</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Werkers" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Werkers</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Boord" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Boord</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Pakhuis" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Pakhuis</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Stoor" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Stoor</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Veldnotas" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Veldnotas</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Werkswinkel" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Werkswinkel</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Water" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Water</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Bespuitings" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Bespuitings</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Lande" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Lande</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Diesel" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Diesel</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Krag" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Krag</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="KI · Vra Plaasjapie" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">KI · Vra Plaasjapie</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Oudit (binnekort)" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Oudit (binnekort)</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Jaareinde" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Jaareinde</label></div>
-          <label style="display:flex;align-items:center;gap:10px;margin-top:14px;font-size:14px;color:#F4F1EA"><span style="flex:0 0 auto">Ander</span><input type="text" placeholder="Iets anders waarvoor jy 'n program soek" style="flex:1;min-width:0;background:transparent;border:0;border-bottom:1px solid rgba(244,241,234,0.45);color:#F4F1EA;font:inherit;font-size:14px;padding:6px 0;outline:0"></label>
+          <label style="display:flex;align-items:center;gap:10px;margin-top:14px;font-size:14px;color:#F4F1EA"><span style="flex:0 0 auto">Ander</span><input type="text" maxlength="200" class="ander" placeholder="Iets anders waarvoor jy 'n program soek" style="flex:1;min-width:0;background:transparent;border:0;border-bottom:1px solid rgba(244,241,234,0.45);color:#F4F1EA;font:inherit;font-size:14px;padding:6px 0;outline:0"></label>
         </fieldset>
         <div style="display:flex;flex-wrap:wrap;gap:12px">
           <a id="wa-kontak" href="https://wa.me/27834565646" target="_blank" rel="noopener" style="display:inline-block;background:#F4F1EA;color:#3A5A32;font-size:15px;font-weight:600;padding:15px 26px" class="x18">WhatsApp ons</a>
@@ -708,17 +722,12 @@ details>summary{cursor:pointer;display:flex}
       <span style="color:#E7E2D6">Minder papier. Meer plaas.</span>
       <span>Eienaar · Weer · Kudde · Werkers · Boord · Pakhuis · Stoor · Veldnotas · Werkswinkel · Water · Bespuitings · Lande · Diesel · Krag · KI · Jaareinde</span>
       <a href="https://plaashek.co.za" style="color:#9C958A" class="x22">plaashek.co.za</a>
+      <a href="privaatheid.html" style="color:#9C958A" class="x22">Privaatheid</a>
+      <a href="voorwaardes.html" style="color:#9C958A" class="x22">Voorwaardes</a>
       <span style="margin-left:auto">© 2026 · Gebou in Suid-Afrika</span>
     </div>
   </footer>
 
 </div>
-<script>
-(function(){var f=document.getElementById('kies'),wa=document.getElementById('wa-kontak'),em=document.getElementById('epos-kontak');if(!f||!wa||!em)return;
-function upd(){var s=[].map.call(f.querySelectorAll('input[type=checkbox]:checked'),function(c){return c.value}),o=f.querySelector('input[type=text]').value.trim();
-var t='Hallo Plaashek. Ek stel belang in: '+(s.length?s.join(', '):'meer inligting')+(o?'. Ander: '+o:'')+'.';
-wa.href='https://wa.me/27834565646?text='+encodeURIComponent(t);em.href='mailto:info@plaashek.co.za?subject=Plaashek%20navraag&body='+encodeURIComponent(t)}
-f.addEventListener('change',upd);f.addEventListener('input',upd);upd()})();
-</script>
 </body>
 </html>

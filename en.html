@@ -3,23 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#F4F1EA">
 <title>Plaashek — Farm software for orchards, herds and packhouses</title>
-<meta name="description" content="Fifteen apps that take the farm off paper: weather, livestock, workers and payroll, harvest, packhouse, store, field notes, workshop, water, sprays, field crops, diesel, electricity, AI and year-end. Built to work offline, in the field." />
+<meta name="description" content="Farm software that takes the farm off paper: livestock, workers and payroll, harvest, packhouse, store, water, crops, diesel and electricity. Works offline.">
 <meta property="og:title" content="Plaashek — Farm software for orchards, herds and packhouses" />
 <meta property="og:description" content="Fifteen apps that take the farm off paper — weather, livestock, workers, harvest, packhouse, store, water, field crops, diesel, electricity, AI, year-end. Built to work offline, in the field." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://plaashek.co.za/en.html" />
+<meta property="og:site_name" content="Plaashek">
+<meta property="og:image" content="https://plaashek.co.za/og-en.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Plaashek: less paper, more farm. Farm software that works offline.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://plaashek.co.za/og-en.jpg">
 <meta property="og:locale" content="en_ZA" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://plaashek.co.za/en.html" />
 <link rel="alternate" hreflang="af" href="https://plaashek.co.za/" />
 <link rel="alternate" hreflang="en" href="https://plaashek.co.za/en.html" />
 <link rel="alternate" hreflang="x-default" href="https://plaashek.co.za/" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Plaashek","description":"Farm software for orchards, herds, packhouses, water, workshops, audits and labour. Offline-first progressive web apps built for South African farms.","url":"https://plaashek.co.za/","telephone":"+27834565646","founder":{"@type":"Person","name":"Dawie Pieterse"},"areaServed":{"@type":"Country","name":"South Africa"},"availableLanguage":["af","en"],"knowsLanguage":["af","en"],"serviceType":"Agricultural software development","sameAs":["https://wa.me/27834565646"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Plaashek","description":"Farm software for orchards, herds, packhouses, water, workshops, audits and labour. Offline-first progressive web apps built for South African farms.","url":"https://plaashek.co.za/","telephone":"+27834565646","areaServed":{"@type":"Country","name":"South Africa"},"availableLanguage":["af","en"],"knowsLanguage":["af","en"],"serviceType":"Agricultural software development","sameAs":["https://wa.me/27834565646"]}</script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Archivo from this site's own fonts/ folder (SIL Open Font License), so the page asks nothing of
+     another website: no visitor's address goes to Google, and there is nothing to ask consent for. */
+  @font-face { font-family: Archivo; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/archivo-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: Archivo; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/archivo-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+</style>
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -45,12 +61,7 @@
     h2 { line-height: 1.14 !important; letter-spacing: -0.02em !important; }
   }
 </style>
-<script>
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('.mnav a');
-    if (a) { var d = a.closest('details'); if (d) d.open = false; }
-  });
-</script>
+<script src="site.js" defer></script>
 <style>
 .x1:hover{border-color:#1E1C18 !important;color:#1E1C18 !important}
 .x2:hover{background:#2C4626 !important;color:#FBF9F4 !important}
@@ -79,6 +90,9 @@ img{max-width:100%}
 details>summary::-webkit-details-marker{display:none}
 details>summary{cursor:pointer;display:flex}
 #faq details>summary .fq::after{content:'+'}
+.x22{display:inline-block;padding:6px 0}
+.ander::placeholder{color:#D8E2D0;opacity:1}
+.ander:focus-visible{border-bottom-color:#F4F1EA !important;box-shadow:0 2px 0 #F4F1EA}
 #faq details[open]>summary .fq::after{content:'\2212'}
 </style>
 </head>
@@ -143,7 +157,7 @@ details>summary{cursor:pointer;display:flex}
       </ul>
     </div>
     <div style="min-width:0;position:relative;aspect-ratio:4/5;background:#E8E3D6;border:1px solid #DED8CA">
-      <img src="photos/pcs-hero.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+      <img src="photos/pcs-hero.webp" alt="Illustration of an open farm gate with veld and thorn trees beyond" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
     </div>
   </section>
 
@@ -178,7 +192,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-owner.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-owner.webp" alt="Farmer with a tablet in a maize field, a centre pivot behind him" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -198,7 +212,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-weer.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-weer.webp" alt="Farmer reading a rain gauge with his phone in hand as a thunderstorm crosses the mountain" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -218,7 +232,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-kudde.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-kudde.webp" alt="A herd of cattle grazing in the veld" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -238,7 +252,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-span.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-span.webp" alt="Foreman briefing a team of workers in front of a tractor" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -258,7 +272,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-boord.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-boord.webp" alt="Pickers harvesting apples in an orchard, crates on a trailer" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -278,7 +292,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-pakhuis.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-pakhuis.webp" alt="Packers sorting oranges in a packhouse beside a barcoded pallet" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -298,7 +312,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-stoor.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-stoor.webp" alt="Farm store with shelves of drums, bags and containers" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -318,7 +332,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-notes.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-notes.webp" alt="Farmer and his son looking at cattle in the veld; the farmer points something out" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -337,7 +351,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-werkswinkel.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-werkswinkel.webp" alt="Tractor with its bonnet open in the farm workshop" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -357,7 +371,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-water.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-water.webp" alt="Irrigation on a field, with a pump house and solar panels" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -376,7 +390,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-bespuitings.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-bespuitings.webp" alt="Tractor with a sprayer in a vineyard" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -395,7 +409,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-lande.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-lande.webp" alt="Tractor with a planter on a maize field, silos in the background" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -415,7 +429,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-diesel.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-diesel.webp" alt="Man with a phone at the farm's diesel tank and pump" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -435,7 +449,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-krag.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-krag.webp" alt="Farmer reading an electricity meter beside solar panels and a pump house" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -455,7 +469,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-ki.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-ki.webp" alt="Farmer looking thoughtfully at a phone with a message on its screen" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -475,7 +489,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-jaareinde.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-jaareinde.webp" alt="Farmer shaking hands with his accountant over a desk of files" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -495,7 +509,7 @@ details>summary{cursor:pointer;display:flex}
 
     <article style="background:#FBF9F4;border:1px solid #DED8CA;display:flex;flex-direction:column">
       <div style="position:relative;aspect-ratio:16/10;background:#E8E3D6;border-bottom:1px solid #DED8CA">
-        <img src="photos/pcs-app-oudit.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-app-oudit.webp" alt="Woman with a clipboard checking boxes of fruit in a cold room" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -581,7 +595,7 @@ details>summary{cursor:pointer;display:flex}
   <section id="custom" style="background:#EAE5D9;border-top:1px solid #DED8CA;border-bottom:1px solid #DED8CA">
     <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))">
       <div style="min-width:0;position:relative;min-height:420px;background:#DDD7C7">
-        <img src="photos/pcs-custom.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-custom.webp" alt="Hands on a laptop with a harvest spreadsheet open" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="min-width:0;padding:64px 24px;display:flex;flex-direction:column;justify-content:center;gap:20px">
         <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#605B52">Custom builds</p>
@@ -632,7 +646,7 @@ details>summary{cursor:pointer;display:flex}
         <footer style="font-size:14px;color:#605B52">Litchi Farmer, Mpumalanga</footer>
       </blockquote>
       <div style="min-width:0;justify-self:center;width:180px;height:180px;background:#E8E3D6;border:1px solid #DED8CA;position:relative">
-        <img src="photos/pcs-quote.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <img src="photos/pcs-quote.webp" alt="Pickers harvesting litchis in an orchard" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
       </div>
     </div>
   </section>
@@ -670,11 +684,11 @@ details>summary{cursor:pointer;display:flex}
         <p style="margin:0;font-size:1.05rem;line-height:1.6;color:#D8E2D0;max-width:46ch">A message is enough to start. We'll ask a few questions, and if we're not the right solution we'll say so.</p>
       </div>
       <div style="min-width:0;display:flex;flex-direction:column;gap:22px">
-        <fieldset id="kies" style="margin:0;padding:0;border:0;min-width:0">
+        <fieldset id="kies" data-hello="Hello Plaashek. I am interested in:" data-none="more information" data-other="Other" data-subject="Plaashek enquiry" style="margin:0;padding:0;border:0;min-width:0">
           <legend style="padding:0;margin:0 0 6px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#CBD9C2">What are you interested in?</legend>
           <p style="margin:0 0 14px;font-size:14px;color:#D8E2D0">Pick as many as you like; it goes into your message.</p>
           <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px 18px"><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Owner" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Owner</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Weather" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Weather</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Herd" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Herd</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Workers" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Workers</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Orchard" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Orchard</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Packhouse" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Packhouse</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Store" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Store</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Field Notes" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Field Notes</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Workshop" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Workshop</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Water" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Water</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Sprays" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Sprays</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Croplands" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Croplands</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Diesel" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Diesel</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Energy" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Energy</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="AI · Ask Plaasjapie" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">AI · Ask Plaasjapie</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Audit (coming)" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Audit (coming)</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#F4F1EA;cursor:pointer"><input type="checkbox" value="Year-end" style="width:17px;height:17px;margin:0;accent-color:#F4F1EA">Year-end</label></div>
-          <label style="display:flex;align-items:center;gap:10px;margin-top:14px;font-size:14px;color:#F4F1EA"><span style="flex:0 0 auto">Other</span><input type="text" placeholder="Something else you want an app for" style="flex:1;min-width:0;background:transparent;border:0;border-bottom:1px solid rgba(244,241,234,0.45);color:#F4F1EA;font:inherit;font-size:14px;padding:6px 0;outline:0"></label>
+          <label style="display:flex;align-items:center;gap:10px;margin-top:14px;font-size:14px;color:#F4F1EA"><span style="flex:0 0 auto">Other</span><input type="text" maxlength="200" class="ander" placeholder="Something else you want an app for" style="flex:1;min-width:0;background:transparent;border:0;border-bottom:1px solid rgba(244,241,234,0.45);color:#F4F1EA;font:inherit;font-size:14px;padding:6px 0;outline:0"></label>
         </fieldset>
         <div style="display:flex;flex-wrap:wrap;gap:12px">
           <a id="wa-kontak" href="https://wa.me/27834565646" target="_blank" rel="noopener" style="display:inline-block;background:#F4F1EA;color:#3A5A32;font-size:15px;font-weight:600;padding:15px 26px" class="x18">WhatsApp us</a>
@@ -708,17 +722,12 @@ details>summary{cursor:pointer;display:flex}
       <span style="color:#E7E2D6">Less paper. More farm.</span>
       <span>Owner · Weather · Herd · Workers · Orchard · Packhouse · Store · Field Notes · Workshop · Water · Sprays · Croplands · Diesel · Energy · AI · Year-end</span>
       <a href="https://plaashek.co.za" style="color:#9C958A" class="x22">plaashek.co.za</a>
+      <a href="privacy.html" style="color:#9C958A" class="x22">Privacy</a>
+      <a href="terms.html" style="color:#9C958A" class="x22">Terms</a>
       <span style="margin-left:auto">© 2026 · Built in South Africa</span>
     </div>
   </footer>
 
 </div>
-<script>
-(function(){var f=document.getElementById('kies'),wa=document.getElementById('wa-kontak'),em=document.getElementById('epos-kontak');if(!f||!wa||!em)return;
-function upd(){var s=[].map.call(f.querySelectorAll('input[type=checkbox]:checked'),function(c){return c.value}),o=f.querySelector('input[type=text]').value.trim();
-var t='Hello Plaashek. I am interested in: '+(s.length?s.join(', '):'more information')+(o?'. Other: '+o:'')+'.';
-wa.href='https://wa.me/27834565646?text='+encodeURIComponent(t);em.href='mailto:info@plaashek.co.za?subject=Plaashek%20enquiry&body='+encodeURIComponent(t)}
-f.addEventListener('change',upd);f.addEventListener('input',upd);upd()})();
-</script>
 </body>
 </html>
